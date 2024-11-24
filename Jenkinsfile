@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('git checkout') {
             steps {
-                git branch: 'main', url: 'git@github.com:Ashaikh609/demo1.git'
+                git branch: 'main', url: 'https://github.com/Ashaikh609/demo1.git'
             }
         }
          stage('mvn build') {
