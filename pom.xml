@@ -18,7 +18,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>17</java.version>
+        <java.version>17</java.version> <!-- Set Java version here -->
     </properties>
 
     <dependencies>
@@ -41,7 +41,7 @@
         <dependency>
               <groupId>junit</groupId>
               <artifactId>junit</artifactId>
-              <version>4.13.2</version>  <!-- You can use the latest version -->
+              <version>4.13.2</version> <!-- You can use the latest version -->
               <scope>test</scope>
         </dependency>
 
@@ -66,15 +66,18 @@
 
     <build>
         <plugins>
+            <!-- Compiler plugin to use Java 17 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <source>${java.version}</source> <!-- Set the source version to Java 17 -->
+                    <target>${java.version}</target> <!-- Set the target version to Java 17 -->
                 </configuration>
             </plugin>
+
+            <!-- Spring Boot plugin for packaging and running the application -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
