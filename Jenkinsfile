@@ -1,7 +1,5 @@
 pipeline {
     agent any
-
-
     stages {
         stage('git checkout') {
             steps {
@@ -11,7 +9,7 @@ pipeline {
         stage('Build Application') {
             steps {
                 sh "mvn clean package"
-                    }
+                 }
                 }
        
     }    
