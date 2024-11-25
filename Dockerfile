@@ -1,4 +1,4 @@
-FROM openjdk:11-jdk-alpine
+FROM openjdk:11-alpine
 WORKDIR /app
 COPY ./target/*.jar /app.jar
 CMD ["java", "-jar", "app.jar"]
