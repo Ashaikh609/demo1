@@ -77,7 +77,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Spring Boot plugin for packaging and running the application -->
+            <!-- Spring Boot plugin for packaging and running theapplication -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
