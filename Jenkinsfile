@@ -16,5 +16,11 @@ pipeline {
                 sh "docker build -t demoapp ."
                  }
                 }
+        stage('Push Docker image') {
+            steps {
+                sh "docker tag demoapp altamash212/demoapp"
+                sh "docker push altamash212/demoapp:latest"
+                 }
+                }
     }    
 }
