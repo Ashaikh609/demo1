@@ -1,8 +1,6 @@
 pipeline {
     agent any
-    tools {
-          jdk 'java'
-        }
+
 
     stages {
         stage('git checkout') {
