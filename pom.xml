@@ -64,38 +64,6 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <!-- Compiler plugin to use Java 17 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.10.1</version>
-                <configuration>
-                    <source>${java.version}</source> <!-- Set the source version to Java 17 -->
-                    <target>${java.version}</target> <!-- Set the target version to Java 17 -->
-                </configuration>
-            </plugin>
-
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.10.1</version>
-            <configuration>
-                <source>${java.version}</source>
-                <target>${java.version}</target>
-                <fork>true</fork>
-                <compilerArgs>
-                    <arg>--add-opens</arg>
-                    <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
-                </compilerArgs>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
-
 <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-compiler-plugin</artifactId>
