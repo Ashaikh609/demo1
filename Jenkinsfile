@@ -20,6 +20,13 @@ pipeline {
             }
         }
 
+    stages {
+        stage('Test Docker Access') {
+            steps {
+                sh 'docker info'
+            }
+        }
+
     stage('Docker Build Image') {
             steps {
                 sh "docker build -t ALS ."
