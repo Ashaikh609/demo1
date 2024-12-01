@@ -13,7 +13,7 @@ pipeline {
                 sh 'java -version'
             }
         }
-        
+
     stage('Build Application') {
             steps {
                 sh "mvn clean package"
@@ -23,8 +23,8 @@ pipeline {
     stage('Docker Build Image') {
             steps {
                 sh "docker build -t ALS ."
-                sh "docker tag ALS altamash212/demoapp1"
-                sh "docker push altamash212/demoapp"
+                sh "docker tag ALS altamash212/demoapp2"
+                sh "docker push altamash212/demoapp2"
             }
         }      
         
