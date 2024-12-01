@@ -23,8 +23,8 @@ pipeline {
     stage('Docker Build Image') {
             steps {
                 sh "docker build -t ALS ."
-                sh "docker tag ALS altamash212/demoapp2"
-                sh "docker push altamash212/demoapp2"
+                sh "docker tag ALS altamash212/demoapp"
+                sh "docker push altamash212/demoapp"
             }
         }      
         
