@@ -8,7 +8,11 @@ pipeline {
             }
         }
 
-        
+        stage('Verify Java Version') {
+            steps {
+                sh 'java -version'
+            }
+        }
     stage('Build Application') {
             steps {
                 sh "mvn clean package"
