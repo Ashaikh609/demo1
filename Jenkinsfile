@@ -13,6 +13,7 @@ pipeline {
                 sh 'java -version'
             }
         }
+        
     stage('Build Application') {
             steps {
                 sh "mvn clean package"
