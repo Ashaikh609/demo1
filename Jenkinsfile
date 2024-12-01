@@ -8,16 +8,20 @@ pipeline {
             }
         }
 
-        stage('Verify Java Version') {
-            steps {
-                sh 'java -version'
-            }
-        }
+        
     stage('Build Application') {
             steps {
                 sh "mvn clean package"
             }
-        }    
+        }
+
+    stage('Docker Build Image') {
+            steps {
+                sh "docker build -t ALS ."
+                sh "docker tag ALS altamash212/demoapp1"
+                sh "docker push altamash212/demoapp"
+            }
+        }      
         
     }
 }
